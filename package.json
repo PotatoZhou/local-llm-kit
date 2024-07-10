@@ -2,11 +2,13 @@
   "name": "local-llm-kit",
   "version": "0.1.0",
   "private": true,
+  "main": "main/main.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "delecrton": "concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -20,6 +22,7 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "antd": "^5.19.1",
+    "electron-serve": "^2.0.0",
     "next": "^13.0.5",
     "next-transpile-modules": "^10.0.1",
     "react": "^18.3.1",
@@ -27,6 +30,9 @@
     "typescript": "5.5.3"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^31.2.0",
+    "electron-builder": "^24.13.3",
     "tailwindcss": "^3.4.4"
   }
 }

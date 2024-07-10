@@ -69,7 +69,7 @@ const Sidebar: React.FC = () => {
                       <>New Chat</>
                   </div>
                   <div>
-                    <Search placeholder='Search Chats'></Search>
+                    <Search className='mt-10 mr-2 ml-2' placeholder='Search Chats'></Search>
                   </div>
                   <br></br>
                   <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
