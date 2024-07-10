@@ -2,10 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  esmExternals: false,
+  transpilePackages: ['antd', '@ant-design/icons']
 }
 
 module.exports = nextConfig
-
-const withTM = require('next-transpile-modules')(["antd"]);
-
-module.exports = withTM({})
